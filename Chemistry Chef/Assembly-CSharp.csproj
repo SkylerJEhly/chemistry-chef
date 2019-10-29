@@ -349,15 +349,18 @@
      <Compile Include="Assets\Oculus\VoiceMod\Scripts\Helpers\OVRMicInput.cs" />
      <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceMod.cs" />
      <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceModContext.cs" />
+     <Compile Include="Assets\Scripts\Movement.cs" />
      <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_PC_SingleComponent.shader" />
      <None Include="Assets\Oculus\Avatar\Samples\CrossPlatform\Readme.txt" />
      <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Materials\Hands_DiffBump.shader" />
+     <None Include="Assets\HQ Old Books\readme.txt" />
      <None Include="Assets\Oculus\SampleFramework\Core\Video\Resources\Multiview Stereo.shader" />
      <None Include="Assets\Oculus\SampleFramework\Usage\Locomotion\Shaders\TriPlanarWorld.shader" />
      <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Materials\Hands_Transparent.shader" />
      <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_Mobile_Loader.shader" />
      <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Shaders\Hands_02.shader" />
      <None Include="Assets\Oculus\SampleFramework\Core\Video\Plugins\Android\Audio360\ThirdPartyNotices.txt" />
+     <None Include="Assets\info_morgueroom.txt" />
      <None Include="Assets\Oculus\Avatar\Resources\Materials\AvatarSurfaceShaderSelfOccluding.shader" />
      <None Include="Assets\Oculus\Avatar\Resources\Materials\AvatarSurfaceShaderPBS.shader" />
      <None Include="Assets\Oculus\Avatar\Samples\SocialStarter\README.txt" />
@@ -367,6 +370,7 @@
      <None Include="Assets\Oculus\Avatar\Resources\Materials\Expressive\Avatar_PC_SingleComponentExpressive.shader" />
      <None Include="Assets\Oculus\Avatar\Resources\Materials\AvatarPBRV2Simple.shader" />
      <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Shaders\Hands_01.shader" />
+     <None Include="Assets\FreeLabAssets\Shaders\SBS_Mana.shader" />
      <None Include="Assets\Oculus\Avatar\Resources\Materials\Expressive\Avatar_Mobile_SingleComponentExpressive.shader" />
      <None Include="Assets\Oculus\SampleFramework\Core\DebugUI\Fonts\Montserrat\OFL.txt" />
      <None Include="Assets\Oculus\Avatar\Resources\Materials\AvatarSurfaceShaderPBSV2.shader" />
@@ -970,6 +974,10 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{F5A5B13E-5F54-B814-F5EF-6CEC3611B85A}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="Oculus.VR.Editor.csproj">
       <Project>{AF5DDE68-9475-5A7C-0CAF-A86A1C9B84D2}</Project>
       <Name>Oculus.VR.Editor</Name>
