@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 494}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 57
+  controlID: 134
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 494}
   m_MaxSize: {x: 10004, y: 14044}
   vertical: 1
-  controlID: 58
+  controlID: 61
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -186,8 +186,8 @@ MonoBehaviour:
     y: 0
     width: 488
     height: 731
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 72}
+  m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -382,20 +382,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/VRTK/LegacyExampleFiles/ExampleResources/Materials
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/VRTK/LegacyExampleFiles/ExampleResources/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Development\SCC402 VR\Chemistry Chef
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 258}
-    m_SelectedIDs: 84520000
-    m_LastClickedID: 21124
-    m_ExpandedIDs: 00000000fc390000883a00003c3b0000343c0000403d0000a03d0000a83e0000043f0000383f0000c63f000050400000a8400000fc420000004300001c4300005e43000078430000b644000096450000ce4500001648000030490000c8490000f6490000344b00005a4d00006c4e00008e4e00004c4f00005e520000645200004453000034540000f25500003e580000d6580000065a00004c5a00008863000000ca9a3b
+    scrollPos: {x: 0, y: 270}
+    m_SelectedIDs: 98550000
+    m_LastClickedID: 21912
+    m_ExpandedIDs: 00000000843a0000103b0000c43b0000be3c0000cc3d00002c3e0000343f0000903f0000c43f000052400000dc4000003441000040410000884300008c430000a8430000ea4300000444000042450000224600005a460000a2480000bc490000544a0000824a0000c24b0000f84b0000e84d0000fc4e00001e4f0000dc4f0000ee520000f4520000d4530000c45400008256000024570000ce58000066590000965a0000e463000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -423,7 +423,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fc390000883a00003c3b0000a23b0000343c0000403d0000a03d0000a83e0000043f0000383f0000c63f000050400000a8400000b4400000fc420000004300001c4300005e430000b644000096450000ce4500001648000030490000c8490000f6490000344b00005a4d00006c4e00008e4e00004c4f0000225000005e520000645200004453000034540000f25500003e580000d6580000065a000088630000
+    m_ExpandedIDs: 00000000843a0000103b0000c43b0000be3c0000cc3d00002c3e0000343f0000903f0000c43f000052400000dc40000034410000884300008c430000a8430000ea4300000444000042450000224600005a460000a2480000bc490000544a0000824a0000c24b0000e84d0000fc4e00001e4f0000dc4f0000ee520000f4520000d4530000c454000082560000ce58000066590000965a0000dc5a0000e4630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -555,7 +555,7 @@ MonoBehaviour:
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 600, y: 318.75}
+  m_LastWindowPixelSize: {x: 480, y: 255}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
@@ -596,9 +596,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.118312, y: 2.4133503, z: -0.41540706}
+    m_Target: {x: -1.1362535, y: 1.7796721, z: 2.558967}
     speed: 2
-    m_Value: {x: -2.118312, y: 2.4133503, z: -0.41540706}
+    m_Value: {x: -1.1362535, y: 1.7796721, z: 2.558967}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -627,13 +627,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.008590943, y: -0.8773839, z: -0.015134013, w: 0.47977966}
+    m_Target: {x: 0.36424714, y: 0.027660767, z: -0.010280346, w: 0.93104744}
     speed: 2
-    m_Value: {x: -0.008612369, y: -0.8765344, z: -0.015118888, w: 0.4810245}
+    m_Value: {x: 0.3642042, y: 0.02486258, z: -0.009185741, w: 0.9309418}
   m_Size:
-    m_Target: 0.8752853
+    m_Target: 0.244093
     speed: 2
-    m_Value: 0.8752853
+    m_Value: -0.05590701
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -688,9 +688,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 109a0000
-      m_LastClickedID: 39440
-      m_ExpandedIDs: 44bcffff00bdffff36bdffff30c2ffffb6ccffff72cdffffa6cdfffff0cdffff60d3ffff74daffff3ee2fffffae2ffff2ee3ffff78e3ffff90e9ffff4ceaffff80eaffffcaeaffffb2edffffc6f0ffff82f1ffffbaf1ffffbcf6ffff0efaffff14faffff64fbffff0a6000005a600000866000002c6b0000ba6b0000166c0000306c0000866c00000e6f0000ba760000c27600000677000032770000507700001079000092810000b68c0000508d00006e8d00007e8d0000048e0000208f0000468f0000608f0000788f00004a990000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 18b4ffffd4b4ffff08b5ffff52b5ffffe4beffffa0bfffffd4bfffff1ec0ffff12c2ffffcec2ffff02c3ffff4cc3ffffded1ffff9ad2ffffced2ffff18d3ffffeadaffffa6dbffffdcdbffffd6e0ffff48faffff20fbffff46600000026f0000266f0000686f000026700000dc7000002c7b0000ae910000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
