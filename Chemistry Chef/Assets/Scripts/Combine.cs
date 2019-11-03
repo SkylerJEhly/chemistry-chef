@@ -14,7 +14,7 @@ public class Combine : MonoBehaviour
     {
         //place in object a
         //both objects must have ridged bodies
-        a = GameObject.Find("Flask_01");
+        a = GameObject.Find("Flask_05");
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class Combine : MonoBehaviour
         //Debug.Log("detected");
 
         //object to collide with
-        if (collision.gameObject.name == "Flask_05")
+        if (collision.gameObject.name == "Flask_04")
         {
             //Debug.Log("detected");
             Vector3 v1 = a.transform.position;

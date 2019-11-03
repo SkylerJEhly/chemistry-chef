@@ -60,14 +60,14 @@
      <None Include="Assets\Oculus\VR\Scripts\Editor\OVROverlaySrcRectEditor.shader" />
      <None Include="Assets\Oculus\VR\Scripts\Editor\Oculus.VR.Scripts.Editor.asmdef" />
      <None Include="Assets\Oculus\VR\Scripts\Editor\OVROverlayDestRectEditor.shader" />
- <Reference Include="UnityEngine.UI">
- <HintPath>E:/Development/SCC402 VR/Chemistry Chef/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>E:/Development/SCC402 VR/Chemistry Chef/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
  <HintPath>E:/Development/SCC402 VR/Chemistry Chef/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>E:/Development/SCC402 VR/Chemistry Chef/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>E:/Development/SCC402 VR/Chemistry Chef/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>

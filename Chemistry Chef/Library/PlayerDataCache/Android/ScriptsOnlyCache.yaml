@@ -2,10 +2,22 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Combine
+    - LocomotionController
+    - LocomotionTeleport
     - MoveObjectController
     - MoveableObject
     - ONSPSettings
     - Oculus.Platform.PlatformSettings
+    - OvrAvatar
+    - OvrAvatarLocalDriver
+    - OvrAvatarSettings
+    - TeleportAimHandlerLaser
+    - TeleportAimVisualLaser
+    - TeleportDestination
+    - TeleportInputHandlerAvatarTouch
+    - TeleportOrientationHandlerThumbstick
+    - TeleportTargetHandlerPhysical
+    - TeleportTransitionInstant
     - VRTK.VRTK_Logger
     Oculus.VR.Editor.dll:
     - OVRConfig
@@ -25,11 +37,17 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
     Assets/Level000.unity:
@@ -96,32 +114,58 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10840}
     - Class: 114
+      Script: {instanceID: 10874}
+    - Class: 114
+      Script: {instanceID: 10924}
+    - Class: 114
       Script: {instanceID: 11178}
+    - Class: 114
+      Script: {instanceID: 11238}
     - Class: 114
       Script: {instanceID: 11492}
     - Class: 114
       Script: {instanceID: 11502}
     - Class: 114
+      Script: {instanceID: 11514}
+    - Class: 114
+      Script: {instanceID: 11544}
+    - Class: 114
       Script: {instanceID: 11730}
     - Class: 114
-      Script: {instanceID: 11920}
+      Script: {instanceID: 11756}
     - Class: 114
-      Script: {instanceID: 12098}
+      Script: {instanceID: 11922}
     - Class: 114
-      Script: {instanceID: 12138}
+      Script: {instanceID: 12016}
     - Class: 114
-      Script: {instanceID: 12546}
+      Script: {instanceID: 12100}
     - Class: 114
-      Script: {instanceID: 12672}
+      Script: {instanceID: 12140}
     - Class: 114
-      Script: {instanceID: 12862}
+      Script: {instanceID: 12158}
     - Class: 114
-      Script: {instanceID: 13256}
+      Script: {instanceID: 12234}
     - Class: 114
-      Script: {instanceID: 13388}
+      Script: {instanceID: 12426}
     - Class: 114
-      Script: {instanceID: 57646}
+      Script: {instanceID: 12548}
+    - Class: 114
+      Script: {instanceID: 12614}
+    - Class: 114
+      Script: {instanceID: 12674}
+    - Class: 114
+      Script: {instanceID: 12832}
+    - Class: 114
+      Script: {instanceID: 12864}
+    - Class: 114
+      Script: {instanceID: 13258}
+    - Class: 114
+      Script: {instanceID: 13390}
+    - Class: 114
+      Script: {instanceID: 13936}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 120
       Script: {instanceID: 0}
     - Class: 134
       Script: {instanceID: 0}
@@ -1768,6 +1812,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.ImageEffects
     className: SunShafts
+  - hash:
+      serializedVersion: 2
+      Hash: 615824a6913cc6a6f7f18d8841d132a8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Combine
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -3820,12 +3870,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: AutoMobileShaderSwitch
-  - hash:
-      serializedVersion: 2
-      Hash: 615824a6913cc6a6f7f18d8841d132a8
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Combine
   platform: 13
   scenePathNames:
   - Assets/Level000.unity
