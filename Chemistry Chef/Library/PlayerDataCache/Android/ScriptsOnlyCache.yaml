@@ -2,6 +2,8 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Combine
+    - HandedInputSelector
+    - LaserPointer
     - LocomotionController
     - LocomotionTeleport
     - MoveObjectController
@@ -11,6 +13,7 @@ ScriptsOnlyBuild:
     - OvrAvatar
     - OvrAvatarLocalDriver
     - OvrAvatarSettings
+    - Reset
     - TeleportAimHandlerLaser
     - TeleportAimVisualLaser
     - TeleportDestination
@@ -29,8 +32,10 @@ ScriptsOnlyBuild:
     - OVRHeadsetEmulator
     - OVRManager
     - OVRPlayerController
+    - OVRRaycaster
     - OVRSceneSampleController
     - OVRScreenFade
+    - UnityEngine.EventSystems.OVRInputModule
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -39,6 +44,13 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
     com.unity.multiplayer-hlapi.Runtime.dll:
     - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
@@ -86,6 +98,8 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 10022}
+    - Class: 114
       Script: {instanceID: 10090}
     - Class: 114
       Script: {instanceID: 10118}
@@ -96,9 +110,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10372}
     - Class: 114
+      Script: {instanceID: 10398}
+    - Class: 114
       Script: {instanceID: 10414}
     - Class: 114
       Script: {instanceID: 10452}
+    - Class: 114
+      Script: {instanceID: 10482}
+    - Class: 114
+      Script: {instanceID: 10508}
     - Class: 114
       Script: {instanceID: 10674}
     - Class: 114
@@ -113,6 +133,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11178}
     - Class: 114
       Script: {instanceID: 11238}
+    - Class: 114
+      Script: {instanceID: 11326}
     - Class: 114
       Script: {instanceID: 11492}
     - Class: 114
@@ -136,7 +158,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12158}
     - Class: 114
+      Script: {instanceID: 12218}
+    - Class: 114
       Script: {instanceID: 12234}
+    - Class: 114
+      Script: {instanceID: 12398}
     - Class: 114
       Script: {instanceID: 12426}
     - Class: 114
@@ -152,12 +178,20 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13258}
     - Class: 114
+      Script: {instanceID: 13370}
+    - Class: 114
       Script: {instanceID: 13390}
     - Class: 114
+      Script: {instanceID: 13748}
+    - Class: 114
       Script: {instanceID: 13936}
+    - Class: 114
+      Script: {instanceID: 69494}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 134
       Script: {instanceID: 0}
@@ -168,6 +202,14 @@ ScriptsOnlyBuild:
     - Class: 143
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     - Class: 258
       Script: {instanceID: 0}
@@ -3558,7 +3600,7 @@ ScriptsOnlyBuild:
     className: SDK_HyperealVRHeadset
   - hash:
       serializedVersion: 2
-      Hash: 85e8aa29d665952264bc2b39d7dd56b9
+      Hash: 39d80cc683459a8dcad09ae1ca115196
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LaserPointer
@@ -3862,7 +3904,13 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: AutoMobileShaderSwitch
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Reset
   platform: 13
   scenePathNames:
   - Assets/Level000.unity
-  playerPath: E:/Development/SCC402 VR/Chemistry Chef/ChemistryChef.apk
+  playerPath: C:/Users/Adam/Documents/GitHub/chemistry-chef/Chemistry Chef/Assets/../Temp/OVRGradleTempExport
