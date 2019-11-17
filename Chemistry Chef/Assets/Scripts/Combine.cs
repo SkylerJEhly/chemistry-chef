@@ -7,6 +7,7 @@ public class Combine : MonoBehaviour
     //the transform is the object that is made
     //drag the prefab into the script
     public Transform c;
+    public Transform d;
     public GameObject a;
     
     // Start is called before the first frame update
@@ -39,6 +40,7 @@ public class Combine : MonoBehaviour
             Destroy(a);
 
             Instantiate(c, v3, Quaternion.identity);
+            Instantiate(d, new Vector3(0.122f, 3.054f, 2.587f), Quaternion.identity);
         }
     }
 }
