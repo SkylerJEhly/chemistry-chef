@@ -767,7 +767,8 @@ public class LocomotionTeleport : MonoBehaviour
 		var destTransform = _teleportDestination.OrientationIndicator;
 
 		Vector3 destPosition = destTransform.position;
-		destPosition.y += character.height * 0.5f;
+		//destPosition.y += character.height * 0.5f;
+		destPosition.y = characterTransform.position.y;// + character.height * 0.5f;
 		Quaternion destRotation = _teleportDestination.LandingRotation;// destTransform.rotation;
 #if false
 		Quaternion destRotation = destTransform.rotation;

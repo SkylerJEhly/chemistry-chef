@@ -40,7 +40,7 @@ public class Combine : MonoBehaviour
             Destroy(a);
 
             Instantiate(c, v3, Quaternion.identity);
-            Instantiate(d, new Vector3(0.122f, 3.054f, 2.587f), Quaternion.identity);
+            Instantiate(d, new Vector3(0.176f, 2.91f, 2.556f), Quaternion.identity);
         }
     }
 }
