@@ -853,8 +853,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429000746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.33, y: 1.02, z: -0.317}
-  m_LocalScale: {x: 0.33172303, y: 1, z: 0.57782996}
+  m_LocalPosition: {x: -0.416, y: 1.108, z: -0.512}
+  m_LocalScale: {x: 0.15969306, y: 1, z: 0.44660446}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 34
@@ -4145,6 +4145,16 @@ PrefabInstance:
       propertyPath: TeleportDestinationPrefab
       value: 
       objectReference: {fileID: 114000012059875471}
+    - target: {fileID: 8303029923119376605, guid: 68a997f5199ac974ab0c5aa0b2671a1a,
+        type: 3}
+      propertyPath: AimCollisionType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8303029923119376604, guid: 68a997f5199ac974ab0c5aa0b2671a1a,
+        type: 3}
+      propertyPath: AimingController
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68a997f5199ac974ab0c5aa0b2671a1a, type: 3}
 --- !u!1001 &8509041645816143618

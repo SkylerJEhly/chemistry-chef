@@ -778,11 +778,12 @@ public class LocomotionTeleport : MonoBehaviour
 #endif
 		if (Teleported != null)
 		{
-			Teleported(characterTransform, destPosition, destRotation);
+			//Teleported(characterTransform, destPosition, destRotation);
+			Teleported(characterTransform, destPosition, characterTransform.rotation);
 		}
 
 		characterTransform.position = destPosition;
-		characterTransform.rotation = destRotation;
+		//characterTransform.rotation = destRotation;
 
 		LocomotionController.PlayerController.Teleported = true;
 	}
