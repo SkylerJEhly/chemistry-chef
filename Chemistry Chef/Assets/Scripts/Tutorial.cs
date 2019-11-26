@@ -10,4 +10,9 @@ public class Tutorial : MonoBehaviour
     {
         SceneManager.LoadScene("Tutorial");
     }
+
+    public void StartLevel000()
+    {
+        SceneManager.LoadScene("Level000");
+    }
 }
