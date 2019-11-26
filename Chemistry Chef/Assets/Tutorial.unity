@@ -383,6 +383,41 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1286658678185478510, guid: f56f42d2bce350747b0bd3f2b940fb5d,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286658678185478510, guid: f56f42d2bce350747b0bd3f2b940fb5d,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286658678185478498, guid: f56f42d2bce350747b0bd3f2b940fb5d,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.8256769
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286658678185478498, guid: f56f42d2bce350747b0bd3f2b940fb5d,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.4053109
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286658678185478498, guid: f56f42d2bce350747b0bd3f2b940fb5d,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.0076273344
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286658678185478498, guid: f56f42d2bce350747b0bd3f2b940fb5d,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.3002684
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286658678185478498, guid: f56f42d2bce350747b0bd3f2b940fb5d,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.019865153
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f56f42d2bce350747b0bd3f2b940fb5d, type: 3}
 --- !u!1 &367886083
@@ -2155,8 +2190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64a7cba64965d8840b25140c833765ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  c: {fileID: 6963622510050481336, guid: 3bab96c2f1ab68346920139dd9b4a7ea, type: 3}
-  d: {fileID: 5631241805950292336, guid: d6bd5234820040f46aebd286cd4d3a89, type: 3}
   a: {fileID: 1282893369}
 --- !u!114 &1282893371
 MonoBehaviour:

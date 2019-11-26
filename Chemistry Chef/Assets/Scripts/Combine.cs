@@ -55,6 +55,14 @@ public class Combine : MonoBehaviour
                             break;
                     }
                     break;
+                case "BakingSoda":
+                    switch(collision.gameObject.name){
+                        case "Vinegar":
+                            Instantiate(Resources.Load("C02"), v3, Quaternion.identity);
+                            goodCol = true;
+                            break;
+                    }
+                    break;
             }
 
         if (goodCol)
