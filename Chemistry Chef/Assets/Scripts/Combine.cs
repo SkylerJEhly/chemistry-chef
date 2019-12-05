@@ -56,16 +56,18 @@ public class Combine : MonoBehaviour
 
                     }
                     break;
-                case "Burner":
+                case "Burner(Clone)":
                     switch(collision.gameObject.name){
                         case "Globe":
                             Instantiate(Resources.Load("Ball"), v3, Quaternion.identity);
                             burnCol = true;
                             break;
                         case "DissolvedNaCl(Clone)":
-                            Instantiate(Resources.Load("H2Ogas"), v3, Quaternion.identity);
-                            Instantiate(Resources.Load("Salt"), v3, Quaternion.identity);
-                            GameObject.Find("NpcScripts").GetComponent<NpcLevelScript>().updateWaitNum();
+                            Instantiate(Resources.Load("H2Ogas"), v3 + new Vector3(0,0,0.5f), Quaternion.identity);
+                            Instantiate(Resources.Load("Salt"), v3 - new Vector3(0,0,0.5f), Quaternion.identity);
+                            NpcLevelScript npc = GameObject.Find("NpcScripts").GetComponent<NpcLevelScript>();
+                            npc.updateWaitNum();
+                            npc.nextText();
                             burnCol = true;
                             break;
                     }
@@ -88,7 +90,9 @@ public class Combine : MonoBehaviour
                     switch(collision.gameObject.name){
                         case "Vinegar(Clone)":
                             Instantiate(Resources.Load("C02"), v3, Quaternion.identity);
-                            GameObject.Find("NpcScripts").GetComponent<NpcLevelScript>().updateWaitNum();
+                            NpcLevelScript npc = GameObject.Find("NpcScripts").GetComponent<NpcLevelScript>();
+                            npc.updateWaitNum();
+                            npc.nextText();
                             goodCol = true;
                             break;
                     }
@@ -96,16 +100,22 @@ public class Combine : MonoBehaviour
             }
 
         if (goodCol)
-        {   
-
+        {
+            ForceDrop(collision.gameObject);
             Destroy(collision.gameObject);
-            
+            ForceDrop(a);
             Destroy(a);
             
         }
         if(burnCol){
+            ForceDrop(collision.gameObject);
             Destroy(collision.gameObject);
-
         }
+    }
+
+    void ForceDrop(GameObject dropMe)
+    {
+        GameObject.Find("RightHandAnchor").GetComponent<OVRGrabber>().ForceRelease(dropMe.GetComponent<OVRGrabbable>());
+        GameObject.Find("LeftHandAnchor").GetComponent<OVRGrabber>().ForceRelease(dropMe.GetComponent<OVRGrabbable>());
     }
 }

@@ -11,11 +11,20 @@ public class NpcLevelScript : MonoBehaviour
 {
 
     public TMP_Text text;
-	public string[] texts;
-	public int num = 0;
+	private string[] texts;
+	private int num = 0;
 	int maxNum = 7;
 	int waitNum = 1; //increased when level completed
+
+	public AudioClip hello;
+    private AudioSource source;
+    private float volLowRange = .5f;
+    private float volHighRange = 1.0f;
    
+	void Awake() {
+        source = GetComponent<AudioSource>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +39,7 @@ public class NpcLevelScript : MonoBehaviour
 		//names may be wrong
         text = GameObject.Find("NpcSpeak").GetComponent<TMP_Text>();
 		text.SetText(texts[0]);
+		StartCoroutine(WelcomeSound());
     }
 
 
@@ -57,7 +67,6 @@ public class NpcLevelScript : MonoBehaviour
 			}
 		}else{
 			text.SetText("Error no more text ahhhhh");
-			//StartCoroutine(GoToLevel000());
 		}
 		
 	}
@@ -85,17 +94,15 @@ public class NpcLevelScript : MonoBehaviour
 				Instantiate(Resources.Load("HCl"), new Vector3(-2.08f, 2.14f, -0.11f), Quaternion.identity);
 				Instantiate(Resources.Load("NaOH"), new Vector3(-2.08f, 2.35f, -0.8f), Quaternion.identity);
                 Instantiate(Resources.Load("NH3"), new Vector3(-2.364f, 2.8f, 0.59f), Quaternion.identity);
+				Instantiate(Resources.Load("Burner"), new Vector3(-1.875f, 2.145f, 0.9f), Quaternion.identity);
 				break;
 		}
 	}
 
-	IEnumerator GoToLevel000()
+	IEnumerator WelcomeSound()
 	{
-        Debug.Log("ahhhh");
-		yield return new WaitForSeconds(3);
-        Debug.Log("ahhhh the second");
-		SceneManager.LoadScene("Level000");
-		
+		yield return new WaitForSeconds(1);
+		source.PlayOneShot(hello, 1F);
 	}
 
 }
