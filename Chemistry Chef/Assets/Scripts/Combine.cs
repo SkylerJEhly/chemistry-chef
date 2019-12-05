@@ -11,11 +11,12 @@ public class Combine : MonoBehaviour
     //public Transform d;
     public GameObject a;//me
     //public GameObject b;
+
     
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -31,6 +32,7 @@ public class Combine : MonoBehaviour
     {
         //Debug.Log("detected");
         bool goodCol = false;
+        bool burnCol = false;
         //object to collide with
 
             //Debug.Log("detected");
@@ -41,11 +43,38 @@ public class Combine : MonoBehaviour
             
 
             switch(a.name){
+                case "HCl(Clone)":
+                    switch(collision.gameObject.name){
+                        case "NaOH(Clone)":
+                            Instantiate(Resources.Load("DissolvedNaCl"), v3, Quaternion.identity);
+                            goodCol = true;
+                            break;
+                        case "NH3(Clone)":
+                            Instantiate(Resources.Load("NH4Cl"), v3, Quaternion.identity);
+                            goodCol = true;
+                            break;
+
+                    }
+                    break;
+                case "Burner":
+                    switch(collision.gameObject.name){
+                        case "Globe":
+                            Instantiate(Resources.Load("Ball"), v3, Quaternion.identity);
+                            burnCol = true;
+                            break;
+                        case "DissolvedNaCl(Clone)":
+                            Instantiate(Resources.Load("H2Ogas"), v3, Quaternion.identity);
+                            Instantiate(Resources.Load("Salt"), v3, Quaternion.identity);
+                            GameObject.Find("NpcScripts").GetComponent<NpcLevelScript>().updateWaitNum();
+                            burnCol = true;
+                            break;
+                    }
+                    break;
                 case "Flask_A":
                     switch(collision.gameObject.name){
                         case "Flask_BT":
                             Instantiate(Resources.Load("Ball"), v3, Quaternion.identity);
-                            GameObject.Find("NpcScripts").GetComponent<NpcScript>().ballMade();
+                            GameObject.Find("NpcScripts").GetComponent<NpcTutorialScript>().ballMade();
                             goodCol = true;
                             break;
                         case "Flask_B":
@@ -55,10 +84,11 @@ public class Combine : MonoBehaviour
                             break;
                     }
                     break;
-                case "BakingSoda":
+                case "BakingSoda(Clone)":
                     switch(collision.gameObject.name){
-                        case "Vinegar":
+                        case "Vinegar(Clone)":
                             Instantiate(Resources.Load("C02"), v3, Quaternion.identity);
+                            GameObject.Find("NpcScripts").GetComponent<NpcLevelScript>().updateWaitNum();
                             goodCol = true;
                             break;
                     }
@@ -67,10 +97,15 @@ public class Combine : MonoBehaviour
 
         if (goodCol)
         {   
+
             Destroy(collision.gameObject);
             
             Destroy(a);
             
+        }
+        if(burnCol){
+            Destroy(collision.gameObject);
+
         }
     }
 }
