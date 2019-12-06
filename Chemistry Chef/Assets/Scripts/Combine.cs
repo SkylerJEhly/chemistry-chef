@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Combine : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class Combine : MonoBehaviour
         //Debug.Log("detected");
         bool goodCol = false;
         bool burnCol = false;
+        bool hclWrong = false;
         //object to collide with
 
             //Debug.Log("detected");
@@ -47,13 +49,20 @@ public class Combine : MonoBehaviour
                     switch(collision.gameObject.name){
                         case "NaOH(Clone)":
                             Instantiate(Resources.Load("DissolvedNaCl"), v3, Quaternion.identity);
+                            NpcLevelScript npc = GameObject.Find("NpcScripts").GetComponent<NpcLevelScript>();
+                            npc.updateWaitNum();
+                            npc.nextText();
                             goodCol = true;
+                            GameObject.Find("CurrentScore").GetComponent<Score>().updateScore(10);
                             break;
                         case "NH3(Clone)":
                             Instantiate(Resources.Load("NH4Cl"), v3, Quaternion.identity);
+                            TMP_Text npcText = GameObject.Find("NpcSpeak").GetComponent<TMP_Text>();
+                            npcText.SetText("Oops. It looks like you made Ammonium Chloride. Try combining the HCl and NaOH. I've given you some more HCl.");
+                            hclWrong = true;
                             goodCol = true;
+                            GameObject.Find("CurrentScore").GetComponent<Score>().updateScore(-10);
                             break;
-
                     }
                     break;
                 case "Burner(Clone)":
@@ -69,6 +78,7 @@ public class Combine : MonoBehaviour
                             npc.updateWaitNum();
                             npc.nextText();
                             burnCol = true;
+                            GameObject.Find("CurrentScore").GetComponent<Score>().updateScore(10);
                             break;
                     }
                     break;
@@ -94,6 +104,7 @@ public class Combine : MonoBehaviour
                             npc.updateWaitNum();
                             npc.nextText();
                             goodCol = true;
+                            GameObject.Find("CurrentScore").GetComponent<Score>().updateScore(10);
                             break;
                     }
                     break;
@@ -105,6 +116,10 @@ public class Combine : MonoBehaviour
             Destroy(collision.gameObject);
             ForceDrop(a);
             Destroy(a);
+
+            if (hclWrong){
+                Instantiate(Resources.Load("HCl"), v3 - new Vector3(0,0,0.4f), Quaternion.identity);
+            }
             
         }
         if(burnCol){

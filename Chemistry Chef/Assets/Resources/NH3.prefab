@@ -88,7 +88,7 @@ SphereCollider:
   m_GameObject: {fileID: 3882127841387701459}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -190,8 +190,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1.0036129
+  m_Center: {x: 0, y: 0, z: 0.010184348}
 --- !u!54 &-2887278581881796544
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -422,7 +422,7 @@ SphereCollider:
   m_GameObject: {fileID: 3882127841673117672}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -514,7 +514,7 @@ SphereCollider:
   m_GameObject: {fileID: 3882127842185655054}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -525,10 +525,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3882127841581442727}
     m_Modifications:
-    - target: {fileID: 182086, guid: 9ab61c80dfd411f4c86b8553b0c42cf1, type: 3}
-      propertyPath: m_Name
-      value: ObjectTooltip (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 441652, guid: 9ab61c80dfd411f4c86b8553b0c42cf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -575,15 +571,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 441652, guid: 9ab61c80dfd411f4c86b8553b0c42cf1, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 441652, guid: 9ab61c80dfd411f4c86b8553b0c42cf1, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 441652, guid: 9ab61c80dfd411f4c86b8553b0c42cf1, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.3
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 182086, guid: 9ab61c80dfd411f4c86b8553b0c42cf1, type: 3}
+      propertyPath: m_Name
+      value: ObjectTooltip (1)
       objectReference: {fileID: 0}
     - target: {fileID: 11464476, guid: 9ab61c80dfd411f4c86b8553b0c42cf1, type: 3}
       propertyPath: containerColor.r
