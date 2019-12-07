@@ -56,7 +56,7 @@ public class Combine : MonoBehaviour
                             GameObject.Find("CurrentScore").GetComponent<Score>().updateScore(10);
                             break;
                         case "NH3(Clone)":
-                            Instantiate(Resources.Load("NH4Cl"), v3, Quaternion.identity);
+                            Instantiate(Resources.Load("NH4Cl"), v3 + new Vector3(0,0,0.2f), Quaternion.identity);
                             TMP_Text npcText = GameObject.Find("NpcSpeak").GetComponent<TMP_Text>();
                             npcText.SetText("Oops. It looks like you made Ammonium Chloride. Try combining the HCl and NaOH. I've given you some more HCl.");
                             hclWrong = true;
@@ -118,7 +118,7 @@ public class Combine : MonoBehaviour
             Destroy(a);
 
             if (hclWrong){
-                Instantiate(Resources.Load("HCl"), v3 - new Vector3(0,0,0.4f), Quaternion.identity);
+                Instantiate(Resources.Load("HCl"), v3 - new Vector3(0,0,0.2f), Quaternion.identity);
             }
             
         }

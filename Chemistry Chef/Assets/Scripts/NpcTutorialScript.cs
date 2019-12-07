@@ -13,9 +13,9 @@ public class NpcTutorialScript : MonoBehaviour
     public TMP_Text text;
 	public string[] texts;
 	public int num = 0;
-	int maxNum = 7;
+	int maxNum = 9;
 	bool ballmade = false;
-	int ballNum = 6;
+	int ballNum = 8;
    
     // Start is called before the first frame update
     void Start()
@@ -28,6 +28,8 @@ public class NpcTutorialScript : MonoBehaviour
 		texts[3] = "If at any time you would like to leave this tutorial press 'Skip Tutorial'.";
 		texts[4] = "If your play area is small you may need to teleport";
 		texts[5] = "You do this by pointing your right controller at the ground, and pressing the back trigger button";
+		texts[6] = "You have two grab buttons on the insides of your controllers.";
+		texts[7] = "In order to grab, stick your controller into an object, then press and hold the corresponding grab button.";
 		texts[ballNum] = "Make the ball by picking up and colliding the flasks";
 		//texts[ballNum+1] = "Goodbye";
 		//names may be wrong
@@ -64,7 +66,7 @@ public class NpcTutorialScript : MonoBehaviour
 		}else if(num < maxNum){
 			text.SetText(texts[num]);
 		}else{
-			text.SetText("Goodbye!");
+			text.SetText("See you soon!");
 			StartCoroutine(GoToLevel000());
 		}
 		
