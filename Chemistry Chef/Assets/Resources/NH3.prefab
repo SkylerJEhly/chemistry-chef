@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: -2452746370840063931}
   - component: {fileID: 4557080019416610777}
   - component: {fileID: 9199391775496318568}
+  - component: {fileID: 6006009564305545397}
   m_Layer: 0
   m_Name: NH3
   m_TagString: Untagged
@@ -232,7 +233,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3882127841581442731}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b98ac83f3b50ac142b1bc976709739bc, type: 3}
@@ -328,12 +329,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3882127841581442731}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05f0d4ad8e23eba4db7af5fcf2bdde57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 8300000, guid: b98ac83f3b50ac142b1bc976709739bc, type: 3}
+--- !u!114 &6006009564305545397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3882127841581442731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a7cba64965d8840b25140c833765ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a: {fileID: 3882127841581442731}
+  err: {fileID: 8300000, guid: 4ba4d4b364425b54396115b71ab75388, type: 3}
 --- !u!1 &3882127841673117672
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,6 +540,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3882127841581442727}
     m_Modifications:
+    - target: {fileID: 182086, guid: 9ab61c80dfd411f4c86b8553b0c42cf1, type: 3}
+      propertyPath: m_Name
+      value: ObjectTooltip (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 441652, guid: 9ab61c80dfd411f4c86b8553b0c42cf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -580,10 +599,6 @@ PrefabInstance:
     - target: {fileID: 441652, guid: 9ab61c80dfd411f4c86b8553b0c42cf1, type: 3}
       propertyPath: m_LocalScale.z
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 182086, guid: 9ab61c80dfd411f4c86b8553b0c42cf1, type: 3}
-      propertyPath: m_Name
-      value: ObjectTooltip (1)
       objectReference: {fileID: 0}
     - target: {fileID: 11464476, guid: 9ab61c80dfd411f4c86b8553b0c42cf1, type: 3}
       propertyPath: containerColor.r

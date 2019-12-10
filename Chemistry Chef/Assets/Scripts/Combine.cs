@@ -11,8 +11,16 @@ public class Combine : MonoBehaviour
     //public Transform c;
     //public Transform d;
     public GameObject a;//me
-    //public GameObject b;
+    //public gameObject b;
 
+    public AudioClip err;
+    private AudioSource source;
+    private float volLowRange = .5f;
+    private float volHighRange = 1.0f;
+
+    void Awake() {
+        source = GetComponent<AudioSource>();
+    }
     
     // Start is called before the first frame update
     void Start()
@@ -63,6 +71,9 @@ public class Combine : MonoBehaviour
                             goodCol = true;
                             GameObject.Find("CurrentScore").GetComponent<Score>().updateScore(-10);
                             break;
+                        default:
+                            CheckForSound(collision.gameObject);
+                            break;
                     }
                     break;
                 case "Burner(Clone)":
@@ -80,6 +91,9 @@ public class Combine : MonoBehaviour
                             burnCol = true;
                             GameObject.Find("CurrentScore").GetComponent<Score>().updateScore(10);
                             break;
+                        default:
+                            CheckForSound(collision.gameObject);
+                            break;
                     }
                     break;
                 case "Flask_A":
@@ -91,8 +105,11 @@ public class Combine : MonoBehaviour
                             break;
                         case "Flask_B":
                             Instantiate(Resources.Load("Ball"), v3, Quaternion.identity);
-                            Instantiate(Resources.Load("Gold Trophy"), new Vector3(0.176f, 2.91f, 2.556f), Quaternion.identity);
+                            //Instantiate(Resources.Load("Gold Trophy"), new Vector3(0.176f, 2.91f, 2.556f), Quaternion.identity);
                             goodCol = true;
+                            break;
+                        default:
+                            CheckForSound(collision.gameObject);
                             break;
                     }
                     break;
@@ -106,10 +123,57 @@ public class Combine : MonoBehaviour
                             goodCol = true;
                             GameObject.Find("CurrentScore").GetComponent<Score>().updateScore(10);
                             break;
+                        default:
+                            CheckForSound(collision.gameObject);
+                            break;
+                    }
+                    break;
+                case "NaOH(Clone)":
+                    switch(collision.gameObject.name){
+                        case "HCl(Clone)" :
+                            break;
+                        default :
+                            CheckForSound(collision.gameObject);
+                            break;
+                    }
+                    break;
+                case "NH3(Clone)":
+                    switch(collision.gameObject.name){
+                        case "HCl(Clone)" :
+                            break;
+                        default :
+                            CheckForSound(collision.gameObject);
+                            break;
+                    }
+                    break;
+                case "DissolvedNaCl(Clone)":
+                    switch(collision.gameObject.name){
+                        case "Burner(Clone)" :
+                            break;
+                        default :
+                            CheckForSound(collision.gameObject);
+                            break;
+                    }
+                    break;
+                case "Globe(Clone)":
+                    switch(collision.gameObject.name){
+                        case "Burner(Clone)" :
+                            break;
+                        default :
+                            CheckForSound(collision.gameObject);
+                            break;
+                    }
+                    break;
+                case "Vinegar(Clone)":
+                    switch(collision.gameObject.name){
+                        case "BakingSoda(Clone)" :
+                            break;
+                        default :
+                            CheckForSound(collision.gameObject);
+                            break;
                     }
                     break;
             }
-
         if (goodCol)
         {
             ForceDrop(collision.gameObject);
@@ -132,5 +196,11 @@ public class Combine : MonoBehaviour
     {
         GameObject.Find("RightHandAnchor").GetComponent<OVRGrabber>().ForceRelease(dropMe.GetComponent<OVRGrabbable>());
         GameObject.Find("LeftHandAnchor").GetComponent<OVRGrabber>().ForceRelease(dropMe.GetComponent<OVRGrabbable>());
+    }
+
+    void CheckForSound(GameObject go){
+        if (go.GetComponent<Combine>() != null){
+            source.PlayOneShot(err, 1F);
+        }
     }
 }
